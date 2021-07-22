@@ -35,6 +35,8 @@ function App() {
       <button
         onClick={() => {
           setCoors([...coors, { x: x, y: y }]);
+          setX(Math.round(Math.random() * 500));
+          setY(Math.round(Math.random() * 500));
         }}
       >
         add
