@@ -1,36 +1,13 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import { Asteroid } from "./Asteroid";
 
 function App() {
-  console.log("whiskas");
-  const [opened, setOpened] = useState(true);
-  const [count, setCount] = useState(0);
   return (
     <div>
-      {String(opened)}
-      <label>
-        <input
-          type="checkbox"
-          checked={opened}
-          onChange={() => {
-            setOpened(!opened);
-          }}
-        />
-        Показать
-      </label>
-      {opened ? (
-        <div>
-          content 2
-          <button
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            count: {count}{" "}
-          </button>
-        </div>
-      ) : null}
+      <Asteroid x={45} y={5} />
+      <Asteroid x={60} y={-20} />
+      <Asteroid x={-1} y={20} />
     </div>
   );
 }
